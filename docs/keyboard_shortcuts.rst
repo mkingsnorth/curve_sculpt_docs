@@ -8,6 +8,8 @@ These work in the 3D Viewport while a brush on the *Curve* stroke method is in u
 They are the same keys as Blender's own paint curves, which they take over while 3D curves are on; turn 3D curves off and
 Blender's 2D paint curves have them again.
 
+The same keys are listed in Blender too: open **Shortcuts** at the bottom of the Stroke panel's 3D curve settings.
+
 Left and right mouse buttons are shown for Blender's default *Select with Left* setting, and swap if you select with the right
 mouse button. On a Mac, **Cmd** can be used in place of **Ctrl** for adding points, undo and inverted strokes.
 
