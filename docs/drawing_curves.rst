@@ -28,7 +28,7 @@ What You See
 * The **active** curve's points are drawn on it: round for smooth points, square for sharp ones and diamonds for Bézier points.
   Selected points are orange.
 * Each of its points sits in a **ring** on the surface showing the brush's size there, so you can see how wide the stroke will be
-  (smaller where the pressure is lower, if the brush's size uses pressure).
+  (smaller where the pressure is lower, if the brush's size uses pressure, and fainter if its strength does).
 * The other curves are drawn as lines: **ticked** curves in orange, the rest paler. Hidden curves aren't drawn.
 * Curves are drawn through the mesh, so you can see the parts that run round the back.
 * They follow the viewport's **Show Overlays** toggle: turn overlays off to see the mesh on its own.
@@ -46,7 +46,8 @@ Adding Points
 * With no active curve, a new curve is started.
 
 Hold **Ctrl** before clicking to preview where the point will go: a dashed line runs from the end that will be extended,
-or a dot marks where the point will be inserted.
+or a dot marks where the point will be inserted. The mouse cursor shows a plus where a point will be added, and a hand over an
+existing point or handle, where Ctrl+drag pulls out or drags handles instead (see below).
 
 .. image:: _static/images/add_preview.png
    :alt: The preview while Ctrl is held
@@ -139,7 +140,8 @@ Point Pressure
 Each point has a pressure from 0 to 1 (1 by default), for tapered strokes. Pressure fades evenly from one point to the next.
 
 Press **Alt+S** and move the mouse right for more pressure or left for less, from wherever the mouse is; left-click to confirm or right-click to cancel.
-Points are drawn smaller for less pressure, and their value is shown beside them when it is below 1:
+Points are drawn smaller for less pressure, and their value is shown beside them when it is below 1.
+Their rings shrink too if the brush's size uses pressure, and fade if its strength does:
 
 .. image:: _static/images/pressure_labels.png
    :alt: Point pressure labels
@@ -184,7 +186,8 @@ The Stroke panel lists the mesh's curves:
 Undo
 ---------------------------------
 
-**Ctrl+Z** undoes curve edits and strokes together, in the order you made them; **Ctrl+Shift+Z** (or **Ctrl+Y**) redoes.
+**Ctrl+Z** undoes curve edits and strokes together, in the order you made them, including strokes you sculpt by hand in between;
+**Ctrl+Shift+Z** (or **Ctrl+Y**) redoes.
 
 Surface curves are otherwise kept out of Blender's undo, so undoing a stroke leaves your curves as they are, ready to stroke again.
 Selecting, ticking and hiding curves are not undo steps.

@@ -63,6 +63,7 @@ Ctrl+Z undid a curve edit rather than my stroke.
 ----------------------------------------------------------------------------------
 
 Ctrl+Z steps back through curve edits and strokes together, newest first, so an edit made after a stroke is undone before the stroke.
+Settings changed between curve edits are the exception: those are undone after the curve edits around them.
 See :ref:`undo`.
 
 ----------------------------------------------------------------------------------

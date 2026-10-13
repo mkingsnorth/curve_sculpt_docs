@@ -12,7 +12,7 @@ author = 'Mark Kingsnorth'
 
 # The add-on version these pages describe (its blender_manifest.toml).
 version = '0.15'
-release = '0.15.8'
+release = '0.15.9'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
