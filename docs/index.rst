@@ -1,19 +1,19 @@
-.. Curve Stroke documentation master file.
+.. Curve Stroke 3D documentation master file.
 
-Curve Stroke
+Curve Stroke 3D
 ======================================
 
 .. image:: _static/images/hero.jpg
    :alt: Grooves carved along surface curves
 
 ---------------------------------
-What is Curve Stroke?
+What is Curve Stroke 3D?
 ---------------------------------
 
-Curve Stroke runs Blender's sculpt brushes along curves drawn on the surface of a mesh, in 3D.
+Curve Stroke 3D runs Blender's sculpt brushes along curves drawn on the surface of a mesh, in 3D.
 
 Blender already has a *Curve* stroke method, but its curves are drawn flat on the screen: they only
-follow the surface you can see from one view, and the stroke is projected from there. Curve Stroke
+follow the surface you can see from one view, and the stroke is projected from there. Curve Stroke 3D
 gives the same stroke method curves that lie *on* the mesh, so they wrap around forms, can be
 edited from any angle, and are kept with the object for as long as you need them.
 
@@ -27,7 +27,7 @@ edited from any angle, and are kept with the object for as long as you need them
 Beware!
 ================
 
-* Curve Stroke is an early release: please report any problems, slow downs or ideas to `info@configurate.net <mailto:info@configurate.net>`_.
+* Curve Stroke 3D is an early release: please report any problems, slow downs or ideas to `info@configurate.net <mailto:info@configurate.net>`_.
 * It needs Blender 5.2 or later.
 * Strokes are run by Blender's own sculpt brushes, so they cost what a hand-drawn stroke of the same length would.
 

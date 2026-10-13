@@ -75,6 +75,6 @@ Yes, with some limits on parts of a curve that are out of view. See :ref:`multir
 "Getting the surface ready…" appears and Blender pauses. Why?
 ----------------------------------------------------------------------------------
 
-Curve Stroke keeps its own copy of the mesh's surface for placing points, and rebuilds it after you sculpt.
+Curve Stroke 3D keeps its own copy of the mesh's surface for placing points, and rebuilds it after you sculpt.
 On a large mesh (over about 200,000 faces) that takes a moment, so the note is shown while it happens, the first time you
 place or move a point after a stroke. Moving points without sculpting in between doesn't need it again.

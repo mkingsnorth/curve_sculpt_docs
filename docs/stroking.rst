@@ -34,7 +34,7 @@ all give the same result. A few behave differently, or not at all, along a curve
 * **Twist** turns the surface by the angle the stroke sweeps around its start, so it is very sensitive to the curve's exact shape.
 * The cloth-simulated **Pose** brushes (*Bend/Twist Cloth*, *Stretch/Move Cloth*) move the mesh further than Blender's 2D curve does.
 
-A few brushes only work with particular mesh settings, and Blender normally hides them otherwise. Curve Stroke tells you why
+A few brushes only work with particular mesh settings, and Blender normally hides them otherwise. Curve Stroke 3D tells you why
 rather than run them without:
 
 * *Erase Multires Displacement* and *Smear Multires Displacement* need a Multires modifier.

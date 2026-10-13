@@ -4,7 +4,7 @@
 Get Started
 #################
 
-Curve Stroke works through Blender's own *Curve* stroke method, so it is used from inside whichever
+Curve Stroke 3D works through Blender's own *Curve* stroke method, so it is used from inside whichever
 brush you are sculpting with. Once you have :ref:`installed<installation>` the add-on:
 
 .. TODO: a GIF of these steps, start to finish.

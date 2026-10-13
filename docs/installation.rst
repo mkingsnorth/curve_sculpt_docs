@@ -6,7 +6,7 @@ Installation
 
 .. TODO: an installation GIF, as in the other add-ons' docs.
 
-Curve Stroke is a Blender extension and needs Blender 5.2 or later.
+Curve Stroke 3D is a Blender extension and needs Blender 5.2 or later.
 
 Drag and drop the installation zip file into Blender to install the add-on, or use
 *Edit ‣ Preferences ‣ Get Extensions*, then *Install from Disk…* in the drop-down menu at the top right.
