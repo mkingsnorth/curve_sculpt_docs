@@ -42,4 +42,5 @@ the **Draw Curve** button (and **−** beside it, to stroke inverted), and a pla
 .. tip::
 
     Your surface curves are saved with the mesh in the .blend file. They are only drawn while a brush on the
-    *Curve* stroke method is in use with 3D curves on, so they stay out of the way the rest of the time.
+    *Curve* stroke method is in use with 3D curves on (and the viewport's overlays are shown), so they stay out of
+    the way the rest of the time.

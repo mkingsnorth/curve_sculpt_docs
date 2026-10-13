@@ -40,7 +40,7 @@ mouse button. On a Mac, **Cmd** can be used in place of **Ctrl** for adding poin
    * - **G** / **R** / **S**
      - Move, rotate or scale the selected points over the surface
    * - **Alt+S**
-     - Set the selected points' pressure
+     - Set the selected points' pressure: move right for more, left for less
    * - **V**
      - Cycle the selected points: Smooth, Sharp, Bézier
    * - **X** / **Delete**

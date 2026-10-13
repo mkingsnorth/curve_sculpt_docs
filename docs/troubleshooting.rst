@@ -20,6 +20,7 @@ Check that:
 * The brush's *Stroke Method* is *Curve* and **Activate 3D Curves** is on in its Stroke panel.
   The quickest way is the **Stroke Along 3D Curves** button (see :ref:`quick_start`).
 * You are clicking on the mesh: points can only be placed on its surface.
+* You aren't clicking right on an existing point or handle: there, Ctrl+right-click pulls out that point's handles instead.
 * The active curve isn't hidden. If it is, Ctrl+right-click starts a new curve instead.
 
 ----------------------------------------------------------------------------------
@@ -27,7 +28,8 @@ Where have my curves gone?
 ----------------------------------------------------------------------------------
 
 Curves are only drawn while a brush on the *Curve* stroke method is in use with 3D curves on, so picking a brush on another stroke method
-hides them. They are still on the mesh. Hidden curves (the eye in the :ref:`curve list<curve_list>`) aren't drawn either.
+hides them. They are still on the mesh. They also follow the viewport's **Show Overlays** toggle, and hidden curves
+(the eye in the :ref:`curve list<curve_list>`) aren't drawn at all.
 
 ----------------------------------------------------------------------------------
 Draw Curve is greyed out. Why?
@@ -70,8 +72,9 @@ Does it work with Multires?
 Yes, with some limits on parts of a curve that are out of view. See :ref:`multires`.
 
 ----------------------------------------------------------------------------------
-Where is the Curve Stroke tool?
+"Getting the surface ready…" appears and Blender pauses. Why?
 ----------------------------------------------------------------------------------
 
-Earlier versions had a separate *Curve Stroke* tool in the toolbar. It was replaced by 3D curves on Blender's own *Curve* stroke method
-in version 0.15, which works with every brush. Curves drawn with the tool are kept on the mesh and appear in the curve list.
+Curve Stroke keeps its own copy of the mesh's surface for placing points, and rebuilds it after you sculpt.
+On a large mesh (over about 200,000 faces) that takes a moment, so the note is shown while it happens, the first time you
+place or move a point after a stroke. Moving points without sculpting in between doesn't need it again.

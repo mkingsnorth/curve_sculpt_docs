@@ -10,6 +10,10 @@ project = 'Curve Stroke'
 copyright = '2026, Mark Kingsnorth'
 author = 'Mark Kingsnorth'
 
+# The add-on version these pages describe (its blender_manifest.toml).
+version = '0.15'
+release = '0.15.6'
+
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 

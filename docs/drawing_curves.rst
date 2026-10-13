@@ -16,6 +16,25 @@ points sit on the mesh, so you can turn the view and keep working on the far sid
 
 ----------------------------------------------------------------------
 
+.. _what_you_see:
+
+---------------------------------
+What You See
+---------------------------------
+
+.. image:: _static/images/bezier_handles.png
+   :alt: A curve's points, rings and handles
+
+* The **active** curve's points are drawn on it: round for smooth points, square for sharp ones and diamonds for Bézier points.
+  Selected points are orange.
+* Each of its points sits in a **ring** on the surface showing the brush's size there, so you can see how wide the stroke will be
+  (smaller where the pressure is lower, if the brush's size uses pressure).
+* The other curves are drawn as lines: **ticked** curves in orange, the rest paler. Hidden curves aren't drawn.
+* Curves are drawn through the mesh, so you can see the parts that run round the back.
+* They follow the viewport's **Show Overlays** toggle: turn overlays off to see the mesh on its own.
+
+----------------------------------------------------------------------
+
 ---------------------------------
 Adding Points
 ---------------------------------
@@ -37,9 +56,6 @@ in the direction you are drawing. Starting the drag on an existing point pulls h
 and starting on a handle drags the handle.
 
 New points take the **Initial Point Type** set in the Stroke panel (see :ref:`point_types`).
-
-Each point of the active curve is drawn inside a ring on the surface showing the brush's size there,
-so you can see how wide the stroke will be (smaller where the pressure is lower, if the brush's size uses pressure).
 
 ----------------------------------------------------------------------
 
@@ -101,10 +117,8 @@ so the curve keeps its shape.
 Bézier Handles
 ---------------------------------
 
-.. image:: _static/images/bezier_handles.png
-   :alt: Bézier handles
-
 A Bézier point's handles lie flat across the surface, at right angles to it, as in Substance Painter's path tool.
+Aligned handles are drawn pink and broken ones green (see the picture in :ref:`what_you_see`).
 
 * **Right-drag** a handle to change the curve's direction and bend at the point.
 * **Aligned** handles (pink) stay opposite each other: dragging one turns the other with it.
