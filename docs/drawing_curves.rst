@@ -138,6 +138,7 @@ Point Pressure
 ---------------------------------
 
 Each point has a pressure from 0 to 1 (1 by default), for tapered strokes. Pressure fades evenly from one point to the next.
+To taper just the ends of every curve, use :ref:`Taper Start and End<taper>` instead.
 
 Press **Alt+S** and move the mouse right for more pressure or left for less, from wherever the mouse is; left-click to confirm or right-click to cancel.
 Points are drawn smaller for less pressure, and their value is shown beside them when it is below 1.

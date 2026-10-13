@@ -50,8 +50,25 @@ The brush's own **Size** decides the stroke's width. With the size set in pixels
 point on the curve, so the stroke keeps the width the brush shows on screen there; with the *Radius Unit* set to *Scene* it is the same
 everywhere.
 
-Each dab's pressure is the **Pressure** setting in the Stroke panel times the curve's :ref:`point pressure<point_pressure>` at that spot.
+Each dab's pressure is the **Pressure** setting in the Stroke panel times the curve's :ref:`point pressure<point_pressure>` at that spot,
+times the :ref:`taper<taper>` there.
 Pressure only changes the stroke if the brush uses pressure for its strength or size.
+
+----------------------------------------------------------------------
+
+.. _taper:
+
+---------------------------------
+Taper
+---------------------------------
+
+**Taper Start** and **Taper End** in the Stroke panel taper every curve's ends without setting point pressures:
+the pressure rises from nothing over the first part of each curve and falls to nothing over the last, easing in and out.
+Each is a share of the curve's length, so 0.25 tapers the first (or last) quarter, whatever the curve's size; 0 leaves that end as it is.
+
+The taper multiplies the point pressures, so the two work together: taper the ends automatically, and shape the middle with **Alt+S**.
+Like any pressure, it only changes the stroke if the brush uses pressure for its strength or size.
+The rings around the points shrink or fade with it, so you can see the taper before stroking.
 
 ----------------------------------------------------------------------
 
