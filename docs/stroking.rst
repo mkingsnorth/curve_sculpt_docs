@@ -27,6 +27,13 @@ Any sculpt brush can be used, including **Mask**, **Face Set** and colour **Pain
 own tool, exactly as a hand-drawn stroke would. The brush's settings in the header (size, strength, direction, falloff, texture)
 all apply.
 
+Each of Blender's built-in sculpt brushes has been checked against Blender's own 2D curve stroke along the same path, and nearly
+all give the same result. A few behave differently, or not at all, along a curve:
+
+* **Boundary** brushes, the **Grab Cloth** brushes, **Grab Silhouette** and **Scene Project** do nothing along a curve, as with Blender's own 2D curves.
+* **Twist** turns the surface by the angle the stroke sweeps around its start, so it is very sensitive to the curve's exact shape.
+* The cloth-simulated **Pose** brushes (*Bend/Twist Cloth*, *Stretch/Move Cloth*) move the mesh further than Blender's 2D curve does.
+
 A few brushes only work with particular mesh settings, and Blender normally hides them otherwise. Curve Stroke tells you why
 rather than run them without:
 
