@@ -55,6 +55,8 @@ existing point or handle, where Ctrl+drag pulls out or drags handles instead (se
 **Ctrl+right-drag** adds a point and pulls out its :ref:`Bézier handles<bezier_handles>` in one go,
 in the direction you are drawing. Starting the drag on an existing point pulls handles out of that point instead,
 and starting on a handle drags the handle.
+The handles come out once the cursor passes Blender's **Drag Threshold** (Preferences › Input), which is larger
+for a pen, so a tap with a stylus adds a plain point; raise **Tablet Drag Threshold** if handles still come out by accident.
 
 New points take the **Initial Point Type** set in the Stroke panel (see :ref:`point_types`).
 
