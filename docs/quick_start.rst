@@ -8,7 +8,7 @@ Curve Sculpt 3D works through Blender's own *Curve* stroke method, so it is used
 brush you are sculpting with. Once you have :ref:`installed<installation>` the add-on:
 
 .. image:: _static/images/curve_sculpt_3d_quickstart.gif
-   :alt: Ctrl+right-clicking points onto Suzanne's head, then pressing Enter to sculpt along the curve
+   :alt: Clicking Stroke Along 3D Curves in the Stroke panel, Ctrl+right-clicking points onto Suzanne's head, then pressing Enter to sculpt along the curve
 
 #. Go into `Sculpt Mode <https://docs.blender.org/manual/en/latest/sculpt_paint/sculpting/index.html>`_ and pick a brush, for example *Draw* or *Crease*.
 
@@ -19,6 +19,9 @@ brush you are sculpting with. Once you have :ref:`installed<installation>` the a
 
    This sets the brush's *Stroke Method* to *Curve* and turns on **Activate 3D Curves**.
    The same command is at the bottom of the *Sculpt* menu.
+
+   If the brush is already on the *Curve* stroke method, the panel shows the **Activate 3D Curves** toggle instead
+   (see the picture below): turn it on.
 
 #. **Ctrl+right-click** on the mesh to place points (**Cmd+right-click** also works on a Mac).
    Each click adds a point to the end of the curve nearer the mouse. Hold **Ctrl** to see where the next point will go before you click.
@@ -35,6 +38,12 @@ With 3D curves on, the Stroke panel shows the settings for new points, the strok
 a :ref:`list of the mesh's curves<curve_list>`,
 the **Draw Curve** button (and **−** beside it, to stroke inverted), a place to :ref:`import a curve object<importing_curves>`,
 and **Shortcuts**, a cheat sheet of the :ref:`keys<keyboard_shortcuts>` that opens when you click it.
+
+.. note::
+
+    Higher up, the Stroke panel still shows Blender's own 2D paint curve controls: a *New* curve menu and another
+    *Draw Curve* button. Blender draws those, so they can't be hidden, but they have nothing to stroke while 3D curves are on.
+    Use the **Draw Curve** button below the curve list (or press **Enter**).
 
 .. important::
 

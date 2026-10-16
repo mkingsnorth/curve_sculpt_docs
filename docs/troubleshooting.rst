@@ -18,7 +18,7 @@ Check that:
 
 * You are in Sculpt Mode, with a mesh as the active object.
 * The brush's *Stroke Method* is *Curve* and **Activate 3D Curves** is on in its Stroke panel.
-  The quickest way is the **Stroke Along 3D Curves** button (see :ref:`quick_start`).
+  The quickest way is the **Stroke Along 3D Curves** button, shown while the brush is on another stroke method (see :ref:`quick_start`).
 * You are clicking on the mesh: points can only be placed on its surface.
 * You aren't clicking right on an existing point or handle: there, Ctrl+right-click pulls out that point's handles instead.
 * The active curve isn't hidden. If it is, Ctrl+right-click starts a new curve instead.
@@ -57,6 +57,9 @@ The paint curve drop-down in the Stroke panel keeps going back to empty.
 
 That is Blender's own 2D paint curve, which isn't used while 3D curves are on, so it is kept empty to avoid confusion.
 Your 2D paint curves are kept in the file: turn **Activate 3D Curves** off to use them again.
+
+The *Draw Curve* button beside it is Blender's too, and has nothing to stroke while 3D curves are on. To stroke your 3D curves,
+use the **Draw Curve** button below the curve list, or press **Enter**.
 
 ----------------------------------------------------------------------------------
 Ctrl+Z undid a curve edit rather than my stroke.

@@ -67,7 +67,7 @@ Selecting
 ---------------------------------
 
 * **Left-click** a point to select it, **Shift+left-click** to add or remove points. Clicking a handle selects its point.
-* **Left-click** another curve's line to make it the active curve; **Shift+left-click** a curve's line to add it to (or remove it from) the selected curves.
+* **Left-click** another curve's line to make it the active curve, and the only ticked one; **Shift+left-click** a curve's line to tick or untick it.
 * **Left-click** empty space to deselect everything. The active curve stays active.
 * **A** selects or deselects all the points of the active curve.
 
@@ -118,7 +118,7 @@ so the curve keeps its shape.
 Bézier Handles
 ---------------------------------
 
-A Bézier point's handles lie flat across the surface, at right angles to it, as in Substance Painter's path tool.
+A Bézier point's handles lie flat across the surface (at right angles to its normal), as in Substance Painter's path tool.
 Aligned handles are drawn pink and broken ones green (see the picture in :ref:`what_you_see`).
 
 * **Right-drag** a handle to change the curve's direction and bend at the point.

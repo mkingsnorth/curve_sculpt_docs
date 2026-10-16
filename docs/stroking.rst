@@ -46,9 +46,8 @@ rather than run them without:
 Size and Pressure
 ---------------------------------
 
-The brush's own **Size** decides the stroke's width. With the size set in pixels (the default) it is measured at the depth of each
-point on the curve, so the stroke keeps the width the brush shows on screen there; with the *Radius Unit* set to *Scene* it is the same
-everywhere.
+The brush's own **Size** decides the stroke's width. With its *Size Unit* set to *View* (pixels, the default) it is measured at the depth
+of each point on the curve, so the stroke keeps the width the brush shows on screen there; set to *Scene*, it is the same everywhere.
 
 Each dab's pressure is the **Pressure** setting in the Stroke panel times the curve's :ref:`point pressure<point_pressure>` at that spot,
 times the :ref:`taper<taper>` there.
