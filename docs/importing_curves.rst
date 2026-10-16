@@ -4,7 +4,8 @@
 Importing Curve Objects
 #####################################
 
-.. TODO: a GIF of a curve object imported onto a mesh and stroked.
+.. image:: _static/images/curve_sculpt_3d_import_curve.gif
+   :alt: Importing a Bézier curve object onto Suzanne's head from the Stroke panel
 
 Any Blender curve object can be brought onto the mesh as surface curves, to draw a path with Blender's curve tools
 (or reuse one you already have) and then stroke along it.
