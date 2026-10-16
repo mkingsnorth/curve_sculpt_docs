@@ -7,7 +7,8 @@ Get Started
 Curve Sculpt 3D works through Blender's own *Curve* stroke method, so it is used from inside whichever
 brush you are sculpting with. Once you have :ref:`installed<installation>` the add-on:
 
-.. TODO: a GIF of these steps, start to finish.
+.. image:: _static/images/curve_sculpt_3d_quickstart.gif
+   :alt: Ctrl+right-clicking points onto Suzanne's head, then pressing Enter to sculpt along the curve
 
 #. Go into `Sculpt Mode <https://docs.blender.org/manual/en/latest/sculpt_paint/sculpting/index.html>`_ and pick a brush, for example *Draw* or *Crease*.
 
