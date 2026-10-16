@@ -12,7 +12,7 @@ Any Blender curve object can be brought onto the mesh as surface curves, to draw
 
 In the Stroke panel, pick the curve object in the field at the bottom and click **Import**:
 
-.. image:: _static/images/stroke_panel_on.png
+.. image:: _static/images/stroke_panel_import.png
    :alt: Import, at the bottom of the Stroke panel
 
 Each spline in the curve object becomes a surface curve, named after the object, and each of its points is moved onto the
