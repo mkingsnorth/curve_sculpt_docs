@@ -4,7 +4,8 @@
 Installation
 #############
 
-.. TODO: an installation GIF, as in the other add-ons' docs.
+.. image:: _static/images/installation.gif
+   :alt: Dragging the installation zip file into Blender
 
 Curve Sculpt 3D is a Blender extension and needs Blender 5.2 or later.
 
