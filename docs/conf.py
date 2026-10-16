@@ -6,13 +6,13 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Curve Stroke 3D'
+project = 'Curve Sculpt 3D'
 copyright = '2026, Mark Kingsnorth'
 author = 'Mark Kingsnorth'
 
 # The add-on version these pages describe (its blender_manifest.toml).
 version = '0.15'
-release = '0.15.11'
+release = '0.15.12'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
