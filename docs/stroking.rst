@@ -109,17 +109,16 @@ The brush's *Stroke* panel settings apply to curve strokes as they do to hand-dr
 Multires
 ---------------------------------
 
-Curves work on meshes sculpted with a Multires modifier, with some limits, because Blender only lets add-ons see a Multires mesh's
-*unsculpted* surface while sculpting:
+Curves work on meshes sculpted with a Multires modifier. Blender only lets add-ons see a Multires mesh's *unsculpted* surface
+while sculpting, so:
 
-* Along the parts of a curve you can **see**, each dab is placed on the real, sculpted surface by Blender itself.
-* Along parts **out of view** (behind the mesh), dabs follow the unsculpted surface, so heavily sculpted areas there may not be followed exactly.
-  Turn the view so the curve is visible for the best result.
-* A curve that runs out of view is stroked in two parts, which Blender records as two undo steps; **Ctrl+Z** undoes both together.
+* When you stroke, Curve Sculpt 3D first reads the real, sculpted surface and places every dab on it, so the stroke follows your
+  sculpting, in view or not, just as on a mesh without Multires. On a big mesh this takes a moment (about a second at two
+  million faces), and the cursor shows it's busy.
 * Points are placed on the unsculpted surface, so on a large sculpted form they may appear to sit inside it.
-  The curve is still drawn, and strokes along it still land on the sculpted surface where it can be seen.
+  The curve is still drawn, and strokes along it still land on the sculpted surface.
 
 .. note::
 
-    Meshes using Dynamic Topology haven't been tested as thoroughly yet. If curves seem not to follow your latest sculpting,
-    please :ref:`let us know<contact>`.
+    With Dynamic Topology on, Curve Sculpt 3D catches up with your latest sculpting each time you place points or stroke,
+    which takes a moment on a very large mesh. If curves still seem not to follow your sculpting, please :ref:`let us know<contact>`.

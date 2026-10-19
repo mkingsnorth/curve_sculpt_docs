@@ -73,7 +73,7 @@ See :ref:`undo`.
 Does it work with Multires?
 ----------------------------------------------------------------------------------
 
-Yes, with some limits on parts of a curve that are out of view. See :ref:`multires`.
+Yes. Strokes follow the sculpted surface; on a big mesh each stroke takes a moment to start. See :ref:`multires`.
 
 ----------------------------------------------------------------------------------
 "Getting the surface ready…" appears and Blender pauses. Why?
