@@ -68,6 +68,7 @@ Each is a share of the curve's length, so 0.25 tapers the first (or last) quarte
 The taper multiplies the point pressures, so the two work together: taper the ends automatically, and shape the middle with **Alt+S**.
 Like any pressure, it only changes the stroke if the brush uses pressure for its strength or size.
 The rings around the points shrink or fade with it, so you can see the taper before stroking.
+Start and end follow the curve's direction, which the arrow near its end shows; :ref:`switch_direction` reverses it.
 
 ----------------------------------------------------------------------
 

@@ -20,7 +20,7 @@ mouse button. On a Mac, **Cmd** can be used in place of **Ctrl** for adding poin
    * - Shortcut
      - Action
    * - **Ctrl+Right-click**
-     - Add a point (at the nearer end of the active curve, or on the curve), or start a curve
+     - Add a point (at the end of the active curve, or on the curve), or start a curve
    * - **Ctrl+Right-drag**
      - Add a point and pull out its Bézier handles; on an existing point, pull out its handles; on a handle, drag it
    * - Hold **Ctrl**

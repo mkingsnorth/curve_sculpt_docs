@@ -24,7 +24,7 @@ brush you are sculpting with. Once you have :ref:`installed<installation>` the a
    (see the picture below): turn it on.
 
 #. **Ctrl+right-click** on the mesh to place points (**Cmd+right-click** also works on a Mac).
-   Each click adds a point to the end of the curve nearer the mouse. Hold **Ctrl** to see where the next point will go before you click.
+   Each click adds a point to the end of the curve. Hold **Ctrl** to see where the next point will go before you click.
 
 #. Press **Enter** to run the brush along the curve, or **Ctrl+Enter** to run it inverted.
 
@@ -36,7 +36,7 @@ That's it. The curve stays on the mesh, so you can :ref:`edit it<drawing_curves>
 
 With 3D curves on, the Stroke panel shows the settings for new points, the stroke's **Pressure** and :ref:`Taper<taper>`,
 a :ref:`list of the mesh's curves<curve_list>`,
-the **Draw Curve** button (and **−** beside it, to stroke inverted), a place to :ref:`import a curve object<importing_curves>`,
+the **Draw Curve** button (with **−** beside it, to stroke inverted, and **⇄** to :ref:`switch the curve's direction<switch_direction>`), a place to :ref:`import a curve object<importing_curves>`,
 and **Shortcuts**, a cheat sheet of the :ref:`keys<keyboard_shortcuts>` that opens when you click it.
 
 .. note::

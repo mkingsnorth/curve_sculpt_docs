@@ -29,6 +29,8 @@ What You See
   Selected points are orange.
 * Each of its points sits in a **ring** on the surface showing the brush's size there, so you can see how wide the stroke will be
   (smaller where the pressure is lower, if the brush's size uses pressure, and fainter if its strength does).
+* A small **arrow** just inside each curve's last point shows which way the curve runs, and so where the next point
+  will join the active curve (see :ref:`switch_direction`). It takes the colour of the curve's line.
 * The other curves are drawn as lines: **ticked** curves in orange, the rest paler. Hidden curves aren't drawn.
 * Curves are drawn through the mesh, so you can see the parts that run round the back.
 * They follow the viewport's **Show Overlays** toggle: turn overlays off to see the mesh on its own.
@@ -41,11 +43,12 @@ Adding Points
 
 **Ctrl+right-click** on the mesh to add a point:
 
-* Away from the curve, the point is added to whichever **end** of the active curve is nearer the mouse.
+* Away from the curve, the point is added to the **end** of the active curve, so you keep drawing on from the last point.
+  To add points at the start instead, :ref:`switch the curve's direction<switch_direction>` first.
 * On the curve itself, the point is **inserted** there.
 * With no active curve, a new curve is started.
 
-Hold **Ctrl** before clicking to preview where the point will go: a dashed line runs from the end that will be extended,
+Hold **Ctrl** before clicking to preview where the point will go: a dashed line runs from the curve's end,
 or a dot marks where the point will be inserted. The mouse cursor shows a plus where a point will be added, and a hand over an
 existing point or handle, where Ctrl+drag pulls out or drags handles instead (see below).
 
@@ -180,6 +183,22 @@ The Stroke panel lists the mesh's curves:
 * **+** starts a new, empty curve; **−** deletes the ticked curves (or the active one).
   The tick buttons below them tick or untick every curve.
 * Double-click a name to rename it.
+
+.. _switch_direction:
+
+---------------------------------
+Switch Direction
+---------------------------------
+
+A curve runs from its first point to its last, as you drew it; the arrow near its end shows which way.
+The **⇄** button beside **Draw Curve** (or *Sculpt › Switch Curve Direction*) runs the ticked curves, or the active one,
+the other way, so the start becomes the end. Use it to:
+
+* **Add points at a curve's start**: switch, add them, then switch back if you want it to run the original way.
+* **Swap which end** :ref:`Taper Start and Taper End<taper>` apply to.
+* **Reverse the stroke**, for brushes that care which way they move, such as *Snake Hook*.
+
+The curve keeps its shape, Bézier handles included, and each point keeps its pressure. **Ctrl+Z** switches it back.
 
 ----------------------------------------------------------------------
 
