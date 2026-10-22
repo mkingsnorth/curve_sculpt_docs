@@ -72,6 +72,31 @@ Start and end follow the curve's direction, which the arrow near its end shows; 
 
 ----------------------------------------------------------------------
 
+.. _blend_overlaps:
+
+---------------------------------
+Blend Overlaps
+---------------------------------
+
+Where curves stroked together meet, at a branch or a crossing, their strokes add up, so the meeting point comes out
+higher (or deeper) than the curves either side of it. Turn on **Blend Overlaps** in the Stroke panel to ease each curve
+off where the curves before it have already been, so they read more like one stroke.
+
+* The curves are blended in the order they are listed: the first is stroked as it is, and the later ones fade where
+  they meet it and come back to full strength about a brush radius further on.
+* Like Taper, it works through pressure, so it only changes the stroke if the brush uses pressure for its strength
+  (as *Draw* does) or size.
+* It softens a junction rather than removing it entirely: with *Draw*, a branch's junction comes out a few percent
+  higher rather than a fifth or more. Sharper brushes such as *Draw Sharp* gain more from it but still show a little.
+* It only applies within one stroke. Stroking the same curves again adds on top, as a second hand stroke would.
+
+.. tip::
+
+    For a single junction, setting the branch's first point to zero pressure (**Alt+S**) fades it into the curve it starts
+    on. The *Layer* brush never builds up within a stroke, so curves stroked together with it meet without a bump.
+
+----------------------------------------------------------------------
+
 .. _stroke_settings:
 
 ---------------------------------

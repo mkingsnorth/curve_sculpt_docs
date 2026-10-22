@@ -191,7 +191,7 @@ Switch Direction
 ---------------------------------
 
 A curve runs from its first point to its last, as you drew it; the arrow near its end shows which way.
-The **⇄** button beside **Draw Curve** (or *Sculpt › Switch Curve Direction*) runs the ticked curves, or the active one,
+**Alt+F**, or the **⇄** button beside **Draw Curve** (or *Sculpt › Switch Curve Direction*), runs the ticked curves, or the active one,
 the other way, so the start becomes the end. Use it to:
 
 * **Add points at a curve's start**: switch, add them, then switch back if you want it to run the original way.

@@ -36,7 +36,7 @@ That's it. The curve stays on the mesh, so you can :ref:`edit it<drawing_curves>
 
 With 3D curves on, the Stroke panel shows the settings for new points, the stroke's **Pressure** and :ref:`Taper<taper>`,
 a :ref:`list of the mesh's curves<curve_list>`,
-the **Draw Curve** button (with **−** beside it, to stroke inverted, and **⇄** to :ref:`switch the curve's direction<switch_direction>`), a place to :ref:`import a curve object<importing_curves>`,
+the **Draw Curve** button (with **−** beside it, to stroke inverted, and **⇄** (**Alt+F**) to :ref:`switch the curve's direction<switch_direction>`), a place to :ref:`import a curve object<importing_curves>`,
 and **Shortcuts**, a cheat sheet of the :ref:`keys<keyboard_shortcuts>` that opens when you click it.
 
 .. note::

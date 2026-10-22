@@ -45,6 +45,8 @@ mouse button. On a Mac, **Cmd** can be used in place of **Ctrl** for adding poin
      - Set the selected points' pressure: move right for more, left for less
    * - **V**
      - Cycle the selected points: Smooth, Sharp, Bézier
+   * - **Alt+F**
+     - Switch the direction of the ticked curves (or the active one): see :ref:`switch_direction`
    * - **X** / **Delete**
      - Delete the selected points
    * - **Enter**
