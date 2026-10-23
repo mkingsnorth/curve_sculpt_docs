@@ -12,7 +12,7 @@ Press **Enter** (or click **Draw Curve** in the Stroke panel) to run the brush a
 **Ctrl+Enter** (or the **−** button beside Draw Curve) runs it inverted, as holding Ctrl does while sculpting.
 
 The stroke runs along every **ticked** curve in the :ref:`curve list<curve_list>`, or along the active curve if none are ticked.
-Hidden curves are left out. All the curves go into a single stroke, so a single **Ctrl+Z** undoes it; the brush is not dragged
+Ticked curves are stroked even while hidden, so you can hide them to see the result. All the curves go into a single stroke, so a single **Ctrl+Z** undoes it; the brush is not dragged
 across the gaps between them.
 
 Commands for stroking are also in the *Sculpt* menu while 3D curves are on: *Draw Curve*, *Draw Curve Inverted* and *Import Curve Object*.
@@ -72,28 +72,38 @@ Start and end follow the curve's direction, which the arrow near its end shows; 
 
 ----------------------------------------------------------------------
 
-.. _blend_overlaps:
+.. _curves_meet:
 
 ---------------------------------
-Blend Overlaps
+Where Curves Meet
 ---------------------------------
 
 Where curves stroked together meet, at a branch or a crossing, their strokes add up, so the meeting point comes out
-higher (or deeper) than the curves either side of it. Turn on **Blend Overlaps** in the Stroke panel to ease each curve
-off where the curves before it have already been, so they read more like one stroke.
+higher (or deeper) than the curves either side of it. Testers found the first two of these give the cleanest joins:
+
+* **Point pressure.** Select the point where a branch starts and set its pressure to zero with **Alt+S**
+  (see :ref:`point pressure<point_pressure>`). The branch then fades in from nothing where it meets the curve, instead of
+  adding a lump. It needs a brush that uses pressure for its strength, as *Draw* does.
+* **The Layer brush.** *Layer* raises the surface to a set height and never builds up within a stroke, so curves stroked
+  together with it join without a bump.
+* **Blend Overlaps** (below), which does something similar to the first automatically, but only softens the join.
+
+.. _blend_overlaps:
+
+Blend Overlaps
+==============
+
+**Blend Overlaps** in the Stroke panel (off by default) eases each curve off where the curves before it have already
+been, so overlapping curves read more like one stroke.
 
 * The curves are blended in the order they are listed: the first is stroked as it is, and the later ones fade where
   they meet it and come back to full strength about a brush radius further on.
 * Like Taper, it works through pressure, so it only changes the stroke if the brush uses pressure for its strength
   (as *Draw* does) or size.
-* It softens a junction rather than removing it entirely: with *Draw*, a branch's junction comes out a few percent
-  higher rather than a fifth or more. Sharper brushes such as *Draw Sharp* gain more from it but still show a little.
+* It reduces the build-up rather than removing it: with *Draw*, a branch's junction still comes out a few percent higher
+  than the curves either side, and sharper brushes such as *Draw Sharp* still show a clear bump. For a clean join, use
+  point pressure or the Layer brush instead.
 * It only applies within one stroke. Stroking the same curves again adds on top, as a second hand stroke would.
-
-.. tip::
-
-    For a single junction, setting the branch's first point to zero pressure (**Alt+S**) fades it into the curve it starts
-    on. The *Layer* brush never builds up within a stroke, so curves stroked together with it meet without a bump.
 
 ----------------------------------------------------------------------
 

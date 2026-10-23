@@ -179,9 +179,11 @@ The Stroke panel lists the mesh's curves:
 
 * The **active** curve (highlighted) is the one you add points to and edit.
 * **Ticked** curves are the ones a stroke runs along. If none are ticked, the active curve is used.
-* The **eye** hides a curve: a hidden curve isn't drawn, can't be clicked or edited, and isn't stroked.
+* The **eye** hides a curve: a hidden curve isn't drawn and can't be clicked or edited, but it is still stroked when ticked,
+  so you can hide curves to see the result clearly.
 * **+** starts a new, empty curve; **−** deletes the ticked curves (or the active one).
-  The tick buttons below them tick or untick every curve.
+  The tick buttons below them tick or untick every curve, and the **eye** button below those hides every curve, or
+  shows them all again.
 * Double-click a name to rename it.
 
 .. _switch_direction:

@@ -35,7 +35,7 @@ hides them. They are still on the mesh. They also follow the viewport's **Show O
 Draw Curve is greyed out. Why?
 ----------------------------------------------------------------------------------
 
-There is nothing to stroke: the mesh has no curves yet, or the ticked curves are all hidden. Hover over the button to see which.
+There is nothing to stroke: the mesh has no curves yet. Ctrl+right-click on the mesh to start one.
 
 ----------------------------------------------------------------------------------
 The stroke is weaker than I expected.
