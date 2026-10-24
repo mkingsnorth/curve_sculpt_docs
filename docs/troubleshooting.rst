@@ -38,6 +38,23 @@ Draw Curve is greyed out. Why?
 There is nothing to stroke: the mesh has no curves yet. Ctrl+right-click on the mesh to start one.
 
 ----------------------------------------------------------------------------------
+I press Enter and nothing (or hardly anything) happens. Why?
+----------------------------------------------------------------------------------
+
+Most often the mesh has too few vertices for the brush. A sculpt brush can only move the mesh's own vertices, so on a
+low-poly mesh (Blender's Suzanne has 500 faces) a small brush lands mostly between them and next to nothing moves.
+Curve Sculpt 3D warns in the status bar when a stroke hardly changed the mesh. To fix it:
+
+* Add detail to sculpt: a **Multires** modifier (subdivide it a few times), **Remesh**, or Dynamic Topology.
+* Or make the brush bigger, so it reaches the vertices.
+
+.. note::
+
+    A **Subdivision Surface** modifier makes a low-poly mesh *look* smooth and detailed, but adds no vertices to
+    sculpt: strokes still move the low-poly mesh underneath, and the smooth surface you see sits inside it, so curves
+    can appear to float above the surface. Use Multires instead, or apply the Subdivision Surface modifier first.
+
+----------------------------------------------------------------------------------
 The stroke is weaker than I expected.
 ----------------------------------------------------------------------------------
 

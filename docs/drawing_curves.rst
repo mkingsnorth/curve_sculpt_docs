@@ -49,7 +49,7 @@ Adding Points
 * With no active curve, a new curve is started.
 
 Hold **Ctrl** before clicking to preview where the point will go: a dashed line runs from the curve's end,
-or a dot marks where the point will be inserted. The mouse cursor shows a plus where a point will be added, and a hand over an
+or a dot marks where the point will be inserted. The mouse cursor changes where a point will be added (an arrow with a plus, or an outlined arrow on some systems), and becomes a hand over an
 existing point or handle, where Ctrl+drag pulls out or drags handles instead (see below).
 
 .. image:: _static/images/add_preview.png
