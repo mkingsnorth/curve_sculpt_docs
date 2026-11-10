@@ -41,7 +41,7 @@ mouse button. On a Mac, **Cmd** can be used in place of **Ctrl** for adding poin
    * - **Ctrl** (while dragging a handle)
      - Scale both handles together
    * - **G** / **R** / **S**
-     - Move, rotate or scale the selected points over the surface
+     - Move, rotate or scale the selected points over the surface (with none selected, R sets Remesh's voxel size as usual)
    * - **Alt+S**
      - Set the selected points' pressure: move right for more, left for less
    * - **V**

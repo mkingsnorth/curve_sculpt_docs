@@ -98,6 +98,7 @@ Moving Points
 
 * **Right-drag** a point (or a handle) to move it over the surface. **Shift+right-drag** adds the point to the selection first.
 * **G**, **R** and **S** move, rotate and scale the selected points, keeping them on the surface.
+  With no points selected, R is Sculpt Mode's own again: Remesh's voxel size, or Dyntopo's detail size.
   Left-click or Enter to confirm, right-click or Esc to cancel. You can orbit, pan or zoom the view part way through;
   the points carry on from where they are.
 

@@ -89,11 +89,13 @@ The stroke cuts under a raised form between two points.
 Between two points, the line and the stroke take the short way, and may pass under a form that stands well above them, such as an ear. Add a point on top of the form so the curve goes over it.
 
 ----------------------------------------------------------------------------------
-G, R and S don't do what they usually do in Sculpt Mode.
+G and S don't do what they usually do in Sculpt Mode.
 ----------------------------------------------------------------------------------
 
-Blender's Curve stroke method uses G, R and S to move, rotate and scale its curve points, so while a brush is on it they don't pick the Grab or Smooth brush, or
-set the voxel size. Use the toolbar or the asset shelf for those, or set the brush back to another stroke method.
+Blender's Curve stroke method uses G, R and S to move, rotate and scale its curve points, so while a brush is on it G and S don't pick the Grab or
+Smooth brush. Use the toolbar or the asset shelf for those, or set the brush back to another stroke method.
+
+R still sets Remesh's voxel size (or Dyntopo's detail size) when no points are selected; with points selected, it rotates them.
 
 .. _moving_points_view:
 
