@@ -50,6 +50,16 @@ Adding Points
 * On the curve itself, the point is **inserted** there.
 * With no active curve, a new curve is started.
 
+Until the object has a point, a line at the bottom of the viewport says how to add one, and a plain click
+that does nothing shows a short reminder by the cursor.
+
+.. note::
+   **Why right-click?** It follows Blender's own Paint Curve keys for the Curve stroke method, so the
+   left button stays free for selecting, as it does on Blender's 2D curves.
+
+   **On a Mac trackpad,** use **Cmd + two-finger click**: Ctrl with a two-finger click doesn't reach Blender
+   as a Ctrl+right-click. Cmd works with a mouse too.
+
 Hold **Ctrl** before clicking to preview where the point will go: a dashed line runs from the curve's end,
 or a dot marks where the point will be inserted. The mouse cursor changes where a point will be added (an arrow with a plus, or an outlined arrow on some systems), and becomes a hand over an
 existing point or handle, where Ctrl+drag pulls out or drags handles instead (see below).
