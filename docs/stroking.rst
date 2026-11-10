@@ -48,10 +48,26 @@ Size and Pressure
 
 The brush's own **Size** decides the stroke's width. With its *Size Unit* set to *View* (pixels, the default) it is measured at the depth
 of each point on the curve, so the stroke keeps the width the brush shows on screen there; set to *Scene*, it is the same everywhere.
+A size in pixels covers less of the mesh on a high-resolution screen, so a 4K monitor may need a much bigger number for the same result: set
+*Size Unit* to *Scene* if you want a stroke to come out the same on any screen.
+
+A stroke always uses the active brush and its current settings: curves don't remember a brush, so the same curve can be stroked with any brush, one after another.
 
 Each dab's pressure is the **Pressure** setting in the Stroke panel times the curve's :ref:`point pressure<point_pressure>` at that spot,
 times the :ref:`taper<taper>` there.
-Pressure only changes the stroke if the brush uses pressure for its strength or size.
+:ref:`Pressure Affects<taper_affects>` decides what that pressure changes: the stroke's size, its strength, or both. You don't need a pen for any of this.
+
+----------------------------------------------------------------------
+
+.. _brush_direction:
+
+---------------------------------
+Which Way the Brush Pushes
+---------------------------------
+
+A stroke pushes the way the same brush does by hand. Use the brush's own direction (the **+** and **−** in the tool header) to choose whether it
+adds or carves, or **Ctrl+Enter** to run it the other way for one stroke. Which way counts as "out" comes from the brush's settings, such as
+*Sculpt Plane* in its Brush Settings panel, which curve strokes follow too.
 
 ----------------------------------------------------------------------
 
@@ -62,13 +78,36 @@ Taper
 ---------------------------------
 
 **Taper Start** and **Taper End** in the Stroke panel taper every curve's ends without setting point pressures:
-the pressure rises from nothing over the first part of each curve and falls to nothing over the last, easing in and out.
+the pressure rises over the first part of each curve and falls over the last, easing in and out, from and to the **Fade To** value below them.
 Each is a share of the curve's length, so 0.25 tapers the first (or last) quarter, whatever the curve's size; 0 leaves that end as it is.
 
 The taper multiplies the point pressures, so the two work together: taper the ends automatically, and shape the middle with **Alt+S**.
-Like any pressure, it only changes the stroke if the brush uses pressure for its strength or size.
 The rings around the points shrink or fade with it, so you can see the taper before stroking.
 Start and end follow the curve's direction, which the arrow near its end shows; :ref:`switch_direction` reverses it.
+
+**Fade To** is the pressure the taper fades to at the tips. At 0, the default, they fade to nothing, so even a small taper thins the very end of a stroke, and because dabs overlap,
+the effect reaches about a brush radius in from the end. A higher value leaves the tips part-way, for a softer taper.
+
+On a :ref:`closed curve<closed_curves>` the taper fades in and out at its first point, the seam.
+
+.. _taper_affects:
+
+Pressure Affects
+================
+
+**Pressure Affects**, under Pressure, sets what pressure changes along a curve: the **Pressure** setting, each point's own pressure (**Alt+S**) and the taper.
+While you press **Alt+S**, the header says what it will change:
+
+* **Size and Strength** (the default): the stroke gets thinner and lighter towards a tapered end, like a brush lifted off the page.
+* **Size**: the stroke narrows to a point. With brushes such as *Draw*, whose depth follows their size, it gets shallower too,
+  as it would with a pen, but less than with Size and Strength.
+* **Strength**: the stroke keeps its width and fades out.
+* **Brush Settings**: the brush's own pen-pressure toggles (the pen icons beside its *Size* and *Strength*)
+  decide. With both off, pressure and taper don't change the stroke at all.
+
+The first three ignore the brush's pen icons, so no pen settings are needed, and leave them as they were: the add-on sets them only for the length
+of the stroke, so the brush isn't marked as changed. Where the dabs get smaller they get closer together too, as they do in a hand stroke,
+so a fine tip stays smooth instead of beading.
 
 ----------------------------------------------------------------------
 
@@ -83,10 +122,10 @@ higher (or deeper) than the curves either side of it. Testers found the first tw
 
 * **Point pressure.** Select the point where a branch starts and set its pressure to zero with **Alt+S**
   (see :ref:`point pressure<point_pressure>`). The branch then fades in from nothing where it meets the curve, instead of
-  adding a lump. It needs a brush that uses pressure for its strength, as *Draw* does.
+  adding a lump.
 * **The Layer brush.** *Layer* raises the surface to a set height and never builds up within a stroke, so curves stroked
   together with it join without a bump.
-* **Blend Overlaps** (below), which does something similar to the first automatically, but only softens the join.
+* **Blend Overlaps** (below), which does much the same as the first automatically.
 
 .. _blend_overlaps:
 
@@ -98,11 +137,11 @@ been, so overlapping curves read more like one stroke.
 
 * The curves are blended in the order they are listed: the first is stroked as it is, and the later ones fade where
   they meet it and come back to full strength about a brush radius further on.
-* Like Taper, it works through pressure, so it only changes the stroke if the brush uses pressure for its strength
-  (as *Draw* does) or size.
-* It reduces the build-up rather than removing it: with *Draw*, a branch's junction still comes out a few percent higher
-  than the curves either side, and sharper brushes such as *Draw Sharp* still show a clear bump. For a clean join, use
-  point pressure or the Layer brush instead.
+* It eases the brush's strength, not its size, whatever :ref:`Pressure Affects<taper_affects>` is set to, so a branch keeps
+  its width as it fades into the curve before it, and the taper and point pressure go on setting the size.
+* In testing, a *Draw* branch's junction came out no higher than the curve it joins, and a *Draw Sharp* one a couple of
+  percent higher. Leave it off with *Layer*, which never builds up anyway: with it on, a junction comes out a couple of
+  percent higher.
 * It only applies within one stroke. Stroking the same curves again adds on top, as a second hand stroke would.
 
 ----------------------------------------------------------------------

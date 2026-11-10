@@ -27,11 +27,13 @@ What You See
 
 * The **active** curve's points are drawn on it: round for smooth points, square for sharp ones and diamonds for Bézier points.
   Selected points are orange.
-* Each of its points sits in a **ring** on the surface showing the brush's size there, so you can see how wide the stroke will be
-  (smaller where the pressure is lower, if the brush's size uses pressure, and fainter if its strength does).
+* While it's ticked to be stroked, each of its points sits in a **ring** on the surface showing the brush's size there, so you can see how wide the stroke will be
+  (smaller where the pressure is lower if :ref:`Pressure Affects<taper_affects>` includes size, and fainter if it includes strength).
+  Turning off the brush's **Cursor** checkbox hides the rings, as it does Blender's own brush circle.
 * A small **arrow** just inside each curve's last point shows which way the curve runs, and so where the next point
   will join the active curve (see :ref:`switch_direction`). It takes the colour of the curve's line.
-* The other curves are drawn as lines: **ticked** curves in orange, the rest paler. Hidden curves aren't drawn.
+* The active curve's line is light, and thinner when it isn't ticked. The other curves are drawn as lines: **ticked**
+  curves in orange, the rest paler. Hidden curves aren't drawn.
 * Curves are drawn through the mesh, so you can see the parts that run round the back.
 * They follow the viewport's **Show Overlays** toggle: turn overlays off to see the mesh on its own.
 
@@ -86,7 +88,8 @@ Moving Points
 
 * **Right-drag** a point (or a handle) to move it over the surface. **Shift+right-drag** adds the point to the selection first.
 * **G**, **R** and **S** move, rotate and scale the selected points, keeping them on the surface.
-  Left-click or Enter to confirm, right-click or Esc to cancel.
+  Left-click or Enter to confirm, right-click or Esc to cancel. You can orbit, pan or zoom the view part way through;
+  the points carry on from where they are.
 
 ----------------------------------------------------------------------
 
@@ -111,7 +114,7 @@ Each point is one of three types, shown by its shape:
 
 **V** cycles the selected points through *Smooth → Sharp → Bézier*. If the selected points are of different types,
 they all take the type after the first one's. A point turned into a Bézier point starts with the handles it had as a smooth point,
-so the curve keeps its shape.
+so the curve keeps its shape. Pressing **V** back round to *Smooth* resets a point's handles, so the curve flows through it again.
 
 **Initial Point Type** in the Stroke panel sets the type new points are given.
 
@@ -147,7 +150,7 @@ To taper just the ends of every curve, use :ref:`Taper Start and End<taper>` ins
 
 Press **Alt+S** and move the mouse right for more pressure or left for less, from wherever the mouse is; left-click to confirm or right-click to cancel.
 Points are drawn smaller for less pressure, and their value is shown beside them when it is below 1.
-Their rings shrink too if the brush's size uses pressure, and fade if its strength does:
+Their rings shrink too if :ref:`Pressure Affects<taper_affects>` includes size, and fade if it includes strength:
 
 .. image:: _static/images/pressure_labels.png
    :alt: Point pressure labels
@@ -156,8 +159,8 @@ The point pressure is multiplied by the **Pressure** setting in the Stroke panel
 
 .. note::
 
-    Pressure only changes a stroke if the brush uses it: turn on pressure for the brush's *Strength* or *Size*
-    (the pen icons beside them) to see a taper.
+    :ref:`Pressure Affects<taper_affects>` sets whether pressure changes the stroke's size, its strength or both
+    (both by default). It works without a pen, and ignores the brush's pen icons unless set to *Brush Settings*.
 
 ----------------------------------------------------------------------
 
@@ -169,19 +172,46 @@ Deleting Points
 
 ----------------------------------------------------------------------
 
+.. _closed_curves:
+
+---------------------------------
+Closed Curves
+---------------------------------
+
+.. image:: _static/images/closed_curve.png
+   :alt: A closed curve on a sphere
+
+**Alt+C**, or the loop button beside **Draw Curve**, closes the ticked curves (or the active one) into loops: a new segment runs from the last point back to the first, smoothly if they are smooth points.
+Press it again to open the curve at its first point. A curve needs at least 3 points to close, and if its two ends already overlap, as when you've placed one on top of the other by hand, they are merged into one point.
+
+A closed curve shows a loop icon in the :ref:`curve list<curve_list>`. Its first point is its seam: a :ref:`taper<taper>` fades in and out there, and the direction arrow sits just before it. A new point added away from the curve goes on the closing segment, between the last point and the first.
+
+----------------------------------------------------------------------
+
+.. _duplicate_curves:
+
+---------------------------------
+Duplicating Curves
+---------------------------------
+
+**Shift+D**, or the copy button beside the curve list, duplicates the ticked curves (or the active one). Each copy lies on top of its original, with its points selected and only the copies ticked,
+so **G** moves the copy straight away. Because moving points makes them find the surface again (see :ref:`moving_points_view`), a copy moved a long way can change shape.
+
+----------------------------------------------------------------------
+
 .. _curve_list:
 
 ---------------------------------
 The Curve List
 ---------------------------------
 
-The Stroke panel lists the mesh's curves:
+The **Curve Sculpt** tab in the sidebar, and the Stroke panel, list the mesh's curves:
 
 * The **active** curve (highlighted) is the one you add points to and edit.
 * **Ticked** curves are the ones a stroke runs along. If none are ticked, the active curve is used.
 * The **eye** hides a curve: a hidden curve isn't drawn and can't be clicked or edited, but it is still stroked when ticked,
   so you can hide curves to see the result clearly.
-* **+** starts a new, empty curve; **−** deletes the ticked curves (or the active one).
+* **+** starts a new, empty curve; **−** deletes the ticked curves (or the active one); the copy button :ref:`duplicates<duplicate_curves>` them.
   The tick buttons below them tick or untick every curve, and the **eye** button below those hides every curve, or
   shows them all again.
 * Double-click a name to rename it.

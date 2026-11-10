@@ -66,7 +66,49 @@ Also check the **Pressure** setting in the Stroke panel and the curve's :ref:`po
 I set point pressure but the stroke doesn't taper.
 ----------------------------------------------------------------------------------
 
-Pressure only changes a stroke if the brush uses it. Turn on pressure for the brush's *Strength* or *Size* (the pen icons beside them).
+Check :ref:`Pressure Affects<taper_affects>` in the Stroke panel. With it set to *Brush Settings*, pressure only changes a stroke if the brush
+uses it: turn on pressure for the brush's *Strength* or *Size* (the pen icons beside them), or choose one of the other options.
+
+----------------------------------------------------------------------------------
+Alt+S changes both size and strength, even with only the Size pen icon on.
+----------------------------------------------------------------------------------
+
+The pen icons only count when :ref:`Pressure Affects<taper_affects>` is on *Brush Settings*. Otherwise Pressure Affects decides, and the header says what Alt+S will change.
+With brushes such as *Draw*, whose depth follows their size, **Size** alone also makes the stroke shallower, as it would with a pen.
+
+----------------------------------------------------------------------------------
+Sharp brushes bead on stretches running away from me.
+----------------------------------------------------------------------------------
+
+From a very glancing view, a stretch of curve running away from you is short on screen, and with *Spacing Distance* on *View* the dabs on it can end up far apart. Stroke from a less glancing view, or set the brush's *Spacing Distance* to *Scene*.
+
+----------------------------------------------------------------------------------
+The stroke cuts under a raised form between two points.
+----------------------------------------------------------------------------------
+
+Between two points, the line and the stroke take the short way, and may pass under a form that stands well above them, such as an ear. Add a point on top of the form so the curve goes over it.
+
+----------------------------------------------------------------------------------
+G, R and S don't do what they usually do in Sculpt Mode.
+----------------------------------------------------------------------------------
+
+Blender's Curve stroke method uses G, R and S to move, rotate and scale its curve points, so while a brush is on it they don't pick the Grab or Smooth brush, or
+set the voxel size. Use the toolbar or the asset shelf for those, or set the brush back to another stroke method.
+
+.. _moving_points_view:
+
+----------------------------------------------------------------------------------
+Points jump when I orbit part way through a move.
+----------------------------------------------------------------------------------
+
+G, R and S work from the screen: each selected point follows the mouse, then finds the surface under it from the current view. If an orbit takes a point round the edge of the form,
+the surface under it from there is on the front, so that's where it lands. Orbit first and then start the move, or keep the selected points in view while you orbit. **Esc** or a right-click puts everything back.
+
+----------------------------------------------------------------------------------
+A curve has come away from the surface. How do I put it back?
+----------------------------------------------------------------------------------
+
+This can happen after reshaping the mesh. Moving points makes them find the surface again from the current view. Choose a view that shows the curve, select its points with **A**, press **G**, move the mouse a little and left-click to confirm.
 
 ----------------------------------------------------------------------------------
 The paint curve drop-down in the Stroke panel keeps going back to empty.

@@ -27,6 +27,7 @@ brush you are sculpting with. Once you have :ref:`installed<installation>` the a
    Each click adds a point to the end of the curve. Hold **Ctrl** to see where the next point will go before you click.
 
 #. Press **Enter** to run the brush along the curve, or **Ctrl+Enter** to run it inverted.
+   The main keys are shown in the status bar at the bottom of the window.
 
 That's it. The curve stays on the mesh, so you can :ref:`edit it<drawing_curves>` and stroke it again, with the same brush or another.
 **Ctrl+Z** undoes your last curve edit or stroke.
@@ -34,10 +35,16 @@ That's it. The curve stays on the mesh, so you can :ref:`edit it<drawing_curves>
 .. image:: _static/images/stroke_panel_on.png
    :alt: The Stroke panel with 3D curves on
 
-With 3D curves on, the Stroke panel shows the settings for new points, the stroke's **Pressure** and :ref:`Taper<taper>`,
+With 3D curves on, the Stroke panel shows the settings for new points, the stroke's **Pressure**, :ref:`Pressure Affects<taper_affects>`, :ref:`Taper<taper>` and :ref:`Blend Overlaps<blend_overlaps>`,
 a :ref:`list of the mesh's curves<curve_list>`,
-the **Draw Curve** button (with **−** beside it, to stroke inverted, and **⇄** (**Alt+F**) to :ref:`switch the curve's direction<switch_direction>`), a place to :ref:`import a curve object<importing_curves>`,
+the **Draw Curve** button (with **−** beside it, to stroke inverted, **⇄** (**Alt+F**) to :ref:`switch the curve's direction<switch_direction>` and a loop (**Alt+C**) to :ref:`close the curve<closed_curves>`), a place to :ref:`import a curve object<importing_curves>`,
 and **Shortcuts**, a cheat sheet of the :ref:`keys<keyboard_shortcuts>` that opens when you click it.
+
+.. image:: _static/images/sidebar_tab.png
+   :alt: The Curve Sculpt tab in the sidebar
+
+The same controls are in a tab of their own in the sidebar (press **N** in the viewport, then click **Curve Sculpt**), so you can manage
+your curves while you sculpt, without opening the Stroke panel over the viewport.
 
 .. note::
 

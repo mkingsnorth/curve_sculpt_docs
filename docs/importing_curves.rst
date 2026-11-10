@@ -43,7 +43,7 @@ How Points Are Brought Across
    * - Radius
      - :ref:`Point pressure<point_pressure>`, up to 1
    * - Closed (cyclic) spline
-     - An open curve that returns to its first point
+     - A :ref:`closed curve<closed_curves>`
 
 .. tip::
 

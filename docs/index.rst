@@ -20,7 +20,7 @@ edited from any angle, and are kept with the object for as long as you need them
 * :ref:`Draw curves on the surface<drawing_curves>` with the same keys as Blender's own 2D paint curves.
 * :ref:`Shape them<point_types>` with smooth, sharp and Bézier points, and taper them with :ref:`per-point pressure<point_pressure>` or an automatic :ref:`taper<taper>` at their ends.
 * :ref:`Stroke any brush<stroking>` along them: Draw, Crease, Clay, Mask, Face Sets, colour painting and the rest.
-* Keep as many curves as you like on each mesh, :ref:`hide<curve_list>` the ones you aren't using, and stroke several at once.
+* Keep as many curves as you like on each mesh, :ref:`close<closed_curves>` them into loops, :ref:`duplicate<duplicate_curves>` them, :ref:`hide<curve_list>` the ones you aren't using, and stroke several at once, all from their own tab in the sidebar.
 * :ref:`Import<importing_curves>` existing curve objects onto the surface.
 * Strokes respect the brush's :ref:`Stroke settings<stroke_settings>` (spacing, dash, jitter), and work on :ref:`Multires<multires>` meshes.
 
