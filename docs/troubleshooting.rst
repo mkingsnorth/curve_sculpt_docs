@@ -129,6 +129,15 @@ Settings changed between curve edits are the exception: those are undone after t
 See :ref:`undo`.
 
 ----------------------------------------------------------------------------------
+Blender crashes when I save a heavy Multires sculpt.
+----------------------------------------------------------------------------------
+
+A tester found this was caused by another add-on, *Tabs*, which crashed Blender on saving even with Curve Sculpt 3D turned off.
+If Blender crashes when you save, try turning other add-ons off in *Edit > Preferences > Add-ons* to find the one involved.
+Blender writes a crash log (``blender.crash.txt`` in your temporary folder) that names the add-on's code when one is involved,
+which is worth sending to that add-on's developer.
+
+----------------------------------------------------------------------------------
 Does it work with Multires?
 ----------------------------------------------------------------------------------
 
