@@ -176,6 +176,21 @@ The brush's *Stroke* panel settings apply to curve strokes as they do to hand-dr
    * - **Input Samples**
      - Doesn't apply: it smooths the mouse, and a curve stroke has none.
 
+.. _brush_textures:
+
+---------------------------------
+Brush Textures
+---------------------------------
+
+A brush's texture is stamped by every dab, as in a hand-drawn stroke. Tick the texture's **Rake** (in the brush's *Texture*
+panel, under *Angle*) and it turns to follow the curve, from the first dab to the last, so a shape such as an arrow, a scale or
+a stitch runs along it.
+
+* With *Angle* at 0°, the top of the texture image points back along the curve, towards its start. Set *Angle* to 180° to point
+  it the way the curve runs, which the arrow at the curve's end shows (:ref:`Alt+F<switch_direction>` switches it).
+* Rake follows the curve as it crosses the screen. Where the surface turns away from you, the texture turns a little less than
+  the curve does over the surface, as with a hand-drawn stroke.
+
 ----------------------------------------------------------------------
 
 .. _multires:
