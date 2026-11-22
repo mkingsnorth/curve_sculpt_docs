@@ -97,6 +97,9 @@ Smooth brush. Use the toolbar or the asset shelf for those, or set the brush bac
 
 R still sets Remesh's voxel size (or Dyntopo's detail size) when no points are selected; with points selected, it rotates them.
 
+With **Activate 3D Curves** off and no 2D paint curve on the brush, there's nothing for G, R and S to move, so they're Sculpt Mode's own again:
+G picks the Grab brush, R sets the voxel size and S picks the Smooth brush.
+
 .. _moving_points_view:
 
 ----------------------------------------------------------------------------------

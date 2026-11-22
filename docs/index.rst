@@ -10,7 +10,7 @@ Curve Sculpt 3D
 What is Curve Sculpt 3D?
 ---------------------------------
 
-Curve Sculpt 3D runs Blender's sculpt brushes along curves drawn on the surface of a mesh, in 3D.
+`Curve Sculpt 3D <https://superhivemarket.com/products/curve-sculpt-3d?ref=361>`_ runs Blender's sculpt brushes along curves drawn on the surface of a mesh, in 3D.
 
 Blender already has a *Curve* stroke method, but its curves are drawn flat on the screen: they only
 follow the surface you can see from one view, and the stroke is projected from there. Curve Sculpt 3D
