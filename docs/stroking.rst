@@ -198,6 +198,9 @@ it the way the curve runs, which the arrow at the curve's end shows (:ref:`Alt+F
     For clean stamps, turn the view to face the curve before you press Enter. For a curve that wraps around a form, stroke it
     in sections, each from a view facing that part.
 
+    When a brush with a texture strokes a curve that is partly side-on (more than 60° from facing the view), the status bar
+    says so in place of the usual count of dabs.
+
 .. figure:: _static/images/brush_texture_view.png
    :alt: The same arrow brush along the same curve: turned and smeared when stroked side-on, clean when stroked facing it
 
