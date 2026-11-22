@@ -186,10 +186,23 @@ A brush's texture is stamped by every dab, as in a hand-drawn stroke. Tick the t
 panel, under *Angle*) and it turns to follow the curve, from the first dab to the last, so a shape such as an arrow, a scale or
 a stitch runs along it.
 
-* With *Angle* at 0°, the top of the texture image points back along the curve, towards its start. Set *Angle* to 180° to point
-  it the way the curve runs, which the arrow at the curve's end shows (:ref:`Alt+F<switch_direction>` switches it).
-* Rake follows the curve as it crosses the screen. Where the surface turns away from you, the texture turns a little less than
-  the curve does over the surface, as with a hand-drawn stroke.
+With *Angle* at 0°, the top of the texture image points back along the curve, towards its start. Set *Angle* to 180° to point
+it the way the curve runs, which the arrow at the curve's end shows (:ref:`Alt+F<switch_direction>` switches it).
+
+.. warning::
+
+    **Textures depend on the view you stroke from.** Blender lays a brush texture out, and works out Rake's angle, from the
+    screen, as it does for a hand-drawn stroke. Where the curve runs over a part of the surface you are looking at side-on,
+    such as near the edge of a form, the stamps come out turned and smeared.
+
+    For clean stamps, turn the view to face the curve before you press Enter. For a curve that wraps around a form, stroke it
+    in sections, each from a view facing that part.
+
+.. figure:: _static/images/brush_texture_view.png
+   :alt: The same arrow brush along the same curve: turned and smeared when stroked side-on, clean when stroked facing it
+
+   The same curve and arrow texture (*Area Plane*, *Rake*, *Angle* 180°), seen from the front. Left: stroked from a view where
+   that part of the sphere was side-on. Right: stroked facing it.
 
 ----------------------------------------------------------------------
 
